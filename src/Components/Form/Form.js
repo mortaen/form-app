@@ -1,6 +1,8 @@
-function CreateCharacterForm() {
+import "./Form.css"
+
+function Form() {
   return (
-    <form onSubmit={(event) => handleSubmit(event)}>
+    <form class="form" onSubmit={(event) => handleSubmit(event)}>
       <label>
         Character Name:
         <input type="text" name="characterName"></input>
@@ -23,4 +25,4 @@ function CreateCharacterForm() {
     characterName.focus()
   }
 }
-export default CreateCharacterForm
+export default Form
