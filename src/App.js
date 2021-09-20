@@ -9,7 +9,7 @@ function App() {
       <main>
         <Form onCreateCharacter={handleCreateCharacter} />
         {data.map((character) => (
-          <div>
+          <div key={character.name}>
             {character.name} from {character.house}
           </div>
         ))}
