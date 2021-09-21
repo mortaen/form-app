@@ -1,13 +1,13 @@
 import { useState } from "react"
 import "./App.css"
-import Form from "./Components/Form/Form"
+import CreateCharacterForm from "./Components/CreateCharacterForm/CreateCharacterForm"
 
 function App() {
   const [data, setData] = useState([])
   return (
     <div className="App">
       <main>
-        <Form onCreateCharacter={handleCreateCharacter} />
+        <CreateCharacterForm onCreateCharacter={handleCreateCharacter} />
         {data.map((character) => (
           <div key={character.name}>
             {character.name} from {character.house}
