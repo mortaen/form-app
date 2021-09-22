@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 function CreateCharacterForm({ onCreateCharacter }) {
   return (
-    <form onSubmit={(event) => handleSubmit(event)}>
+    <Form onSubmit={(event) => handleSubmit(event)}>
       <Label>
         Character Name:
         <Input type="text" name="characterName" required></Input>
@@ -12,7 +12,7 @@ function CreateCharacterForm({ onCreateCharacter }) {
         <Input type="text" name="house"></Input>
       </Label>
       <Button>create</Button>
-    </form>
+    </Form>
   )
 
   function handleSubmit(event) {
@@ -34,17 +34,35 @@ function CreateCharacterForm({ onCreateCharacter }) {
 
 const Button = styled.button`
   &:hover {
-    color: palevioletred;
+    color: lightsalmon;
   }
-  font-size: 3rem;
+  font-size: 2rem;
+  background: darkcyan;
+  color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 10px 10px 8px #888888;
 `
 
 const Label = styled.label`
-  font-size: 3rem;
+  font-size: 2rem;
+  background: darkcyan;
+  color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 10px 10px 8px #888888;
 `
 
 const Input = styled.input`
-  font-size: 3rem;
+  font-size: 2rem;
+  background: lightsalmon;
+  color: whitesmoke;
+  border-radius: 10px;
+`
+
+const Form = styled.form`
+  margin: 2vh;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 10px;
 `
 
 export default CreateCharacterForm
